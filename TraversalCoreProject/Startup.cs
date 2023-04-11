@@ -9,6 +9,7 @@ using DTOLayer.DTOs.AnnouncementDTOs;
 using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -22,6 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Xml.XPath;
 using TraversalCoreProject.CQRS.Handlers.DestinationHandlers;
@@ -42,6 +44,12 @@ namespace TraversalCoreProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<GetAllDestinationQueryHandler>();
+            services.AddScoped<GetDestinationByIDQueryHandler>();
+            services.AddScoped<CreateDestinationCommandHandler>();
+            services.AddScoped<RemoveDestinationCommandHandler>();
+            services.AddScoped<UpdateDestinationCommandHandler>();
+
+            services.AddMediatR(typeof(Startup));
 
             services.AddLogging(x =>
             {
@@ -51,7 +59,7 @@ namespace TraversalCoreProject
             });
 
             services.AddDbContext<Context>();
-           
+
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
 
             services.AddHttpClient();
@@ -59,7 +67,7 @@ namespace TraversalCoreProject
             services.ContainerDependencies();
 
             services.AddAutoMapper(typeof(Startup));
-            
+
             services.CustomerValidator();
 
             services.AddControllersWithViews().AddFluentValidation();
