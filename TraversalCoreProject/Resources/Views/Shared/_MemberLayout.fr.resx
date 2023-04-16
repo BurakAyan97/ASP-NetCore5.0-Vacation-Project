@@ -117,25 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Bize" xml:space="preserve">
-    <value>à nous</value>
+  <data name="Aktif Rezv." xml:space="preserve">
+    <value>Active Réserve </value>
   </data>
-  <data name="Bugün" xml:space="preserve">
-    <value>Aujourd'hui</value>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Tableau de Bord</value>
   </data>
-  <data name="Güzel" xml:space="preserve">
-    <value>Beau</value>
+  <data name="Geçmiş Rezv." xml:space="preserve">
+    <value>Past Réserve.</value>
   </data>
-  <data name="Hava" xml:space="preserve">
-    <value>temps</value>
+  <data name="Onay Bekleyen Rezv." xml:space="preserve">
+    <value>Approbation Rés.</value>
   </data>
-  <data name="Merhaba" xml:space="preserve">
-    <value>Bonjour</value>
+  <data name="Profilim" xml:space="preserve">
+    <value>Mon Profil</value>
   </data>
-  <data name="Ulaşın" xml:space="preserve">
-    <value>Contact</value>
+  <data name="Siteye Git" xml:space="preserve">
+    <value>Page D'accueil</value>
   </data>
-  <data name="Çok" xml:space="preserve">
-    <value>Beaucoup</value>
+  <data name="Son Rotalar" xml:space="preserve">
+    <value>Derniers itinéraires</value>
+  </data>
+  <data name="Tur Rotaları" xml:space="preserve">
+    <value>itinéraire de visite</value>
+  </data>
+  <data name="Yeni Rezervasyon" xml:space="preserve">
+    <value>Nouvelle Rés.</value>
+  </data>
+  <data name="Yorumlarım" xml:space="preserve">
+    <value>Mes Comment.</value>
+  </data>
+  <data name="Çıkış Yap" xml:space="preserve">
+    <value>Se Déconnecter</value>
   </data>
 </root>
